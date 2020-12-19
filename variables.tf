@@ -31,6 +31,12 @@ variable machine_type {
   default     = "e2-micro"
 }
 
+variable ssh_allowed {
+  description = "Allow SSH connections to the faasd instance"
+  type        = bool
+  default     = true
+}
+
 variable name {
   description = "The name of the faasd instance. All resources will be namespaced by this value. If left empty, a random name will be used (e.g. faasd-xrjc30)"
   type        = string

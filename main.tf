@@ -26,12 +26,24 @@ resource "google_compute_address" "faasd" {
   name = local.faasd_name
 }
 
-resource "google_compute_firewall" "faasd-firewall" {
+resource "google_compute_firewall" "faasd-firewall-gateway" {
   name    = format("%s-allow-gateway", local.faasd_name)
   network = var.network
   allow {
     protocol = "tcp"
     ports    = ["8080"]
+  }
+  source_ranges = ["0.0.0.0/0"]
+  target_tags   = [local.faasd_name]
+}
+
+resource "google_compute_firewall" "faasd-firewall-ssh" {
+  count   = var.ssh_allowed ? 1 : 0
+  name    = format("%s-allow-ssh", local.faasd_name)
+  network = var.network
+  allow {
+    protocol = "tcp"
+    ports    = ["22"]
   }
   source_ranges = ["0.0.0.0/0"]
   target_tags   = [local.faasd_name]
