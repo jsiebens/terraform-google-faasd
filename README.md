@@ -88,5 +88,6 @@ module "faasd" {
 ## See Also
 
 - [faasd on Google Cloud Platform](https://github.com/jsiebens/terraform-google-faasd)
+- [faasd on Microsoft Azure](https://github.com/jsiebens/terraform-azurerm-faasd)
 - [faasd on DigitalOcean](https://github.com/jsiebens/terraform-digitalocean-faasd)
 - [faasd on Equinix Metal](https://github.com/jsiebens/terraform-equinix-faasd)
