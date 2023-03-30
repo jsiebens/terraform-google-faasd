@@ -35,16 +35,16 @@ module "faasd" {
 
 | Name | Version |
 |------|---------|
-| terraform | >= 1.0.0 |
-| google | >= 3.3 |
-| random | >= 3.1.0 |
+| terraform | >= 1.4.1 |
+| google | >= 4.59.0 |
+| random | >= 3.4.3 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| google | >= 3.3 |
-| random | >= 3.1.0 |
+| google | >= 4.59.0 |
+| random | >= 3.4.3 |
 
 ## Resources
 
@@ -54,8 +54,8 @@ module "faasd" {
 | [google_compute_firewall.faasd_gateway](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
 | [google_compute_firewall.faasd_ssh](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
 | [google_compute_instance.faasd](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance) | resource |
-| [google_project_iam_member.faasd](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_iam_member) | resource |
-| [google_service_account.faasd](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
+| [google_project_iam_member.faasd](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam#google_project_iam_member) | resource |
+| [google_service_account.faasd](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_service_account) | resource |
 | [random_password.faasd](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 
 ## Inputs
